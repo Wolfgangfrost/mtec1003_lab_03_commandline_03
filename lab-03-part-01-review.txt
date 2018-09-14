@@ -301,6 +301,15 @@ Write the command(s) that you used to do this - as well as its output - below:
 ----------
 
 ls 
+Adlm			Movies			isus
+Adobe			Music			mtec1003-lab-03
+Applications		New Unity Project	mtec1003-lab-03.tar.gz
+Desktop			Pictures		pymel.log
+Documents		Public			stuff
+Downloads		QLData			xgen
+Library			Things
+MPLABXProjects		ipe.properties
+
 
 ==========
 9.  What directories are in the mtec1003-lab-03 folder?
