@@ -17,15 +17,15 @@ We're going to be writing a shell script.  First, though... let's figure out wha
 
 What command did you use, and what was its output?
 ----------
+date 
 
-
-
+Tue Sep 18 15:04:09 EDT 2018
 ==========
 2. Print out a calendar for this month.
 
 What command did you use, and what was its output?
 ----------
-
+cal september 2018
 
 
 ==========
@@ -34,14 +34,15 @@ What command did you use, and what was its output?
 What commands did you use to do this?
 ----------
 
-
+cd ~
 
 ==========
 4. Create an empty file called copy_to_backup.sh.  Verify that the file exists.
 
 What commands did you use to do this?
 ----------
-
+touch copy_to_backup.sh.
+ls 
 
 
 ==========
@@ -49,7 +50,7 @@ What commands did you use to do this?
 
 What command did you use to find the permissions?
 ----------
-
+ls -l copy_to_backup.sh.
 
 
 ==========
@@ -57,8 +58,9 @@ What command did you use to find the permissions?
 
 What commands did you use to do this?  What was the output?
 ----------
-
-
+chmod u+x copy_to_backup.sh. 
+ls -l copy_to_backup.sh.
+-rwxr--r--  1 hwmac  staff  0 Sep 18 15:06 copy_to_backup.sh.
 
 ==========
 7. Try executing the file!
@@ -68,16 +70,15 @@ $ ./copy_to_backup.sh
 What command did you use to try to execute the file?  What happens?
 ----------
 
-
-
+./copy_to_backup.sh
+nothing
 ==========
 8. Open the file with nano
 
 What command did you use to do this?
 ----------
 
-
-
+nano copy_to_backup.sh
 ==========
 9. In your file, write the commands to do the following
 
@@ -89,13 +90,15 @@ Don't forget the first line of your shell script! It should begin with #!/bin/ba
 
 Write out the code in your file below...
 ----------
-
-
+#!/bin/bash
+mkdir backup
+cp *txt backup
+echo "I'm done backing up"
 
 ==========
 10. Create a directory in your home called test
 ----------
-
+done
 
 
 ==========
@@ -104,7 +107,7 @@ Write out the code in your file below...
 What commands did you use to do this?
 ----------
 
-
+touch 1.txt 2.txt
 
 ==========
 12. Move the script that you created into this directory.
@@ -112,18 +115,19 @@ What commands did you use to do this?
 What commands did you use to do this?
 ----------
 
-
-
+mv copy_to_backup.sh.  test.sh.  test (wrong but it somehow worked through the error)
 ==========
 13. Run your script.
 
 What commands did you use to do this?
 ----------
 
-
-
+cd test
+./copy_to_backup.sh.
 ==========
 14. Verify that a backup folder was created in your test directory... with copies of the files present.
 
 What commands did you use to do this?  Show the output.
 ----------
+1.txt			backup
+2.txt			copy_to_backup.sh.
